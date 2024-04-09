@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: "Poppins";
+    background: #f7f7f7;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+header {
+    background: #fff;
+}
+header nav ul {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    margin: 30px auto;
+    align-items: center;
+    text-align: center;
+}
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 30px;
+}
+
+main div {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 6px;
+    border: 16px solid #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+}
+main img {
+    min-width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+main .short {
+    grid-row: span 1;
+}
+main .tall {
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 620px) {
+    main {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    header nav ul {
+        display: block;
+        padding: 30px;
+        line-height: 50px;
+        /* margin: 15px auto; */
+    }
+}
