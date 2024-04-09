@@ -1,32 +1,49 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-  }
-  
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  text-align: center;
+  line-height: 100px;
+}
+
+.square:hover {
+  background-color: #367c39;
+}
+
+@media (max-width: 600px) {
   .container {
-    display: flex;
-    gap: 20px;
+    grid-template-columns: repeat(2, 100px);
   }
-  
-  .square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    border-radius: 10px;
-    transition: background-color 0.3s;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(3, 100px);
   }
-  
-  .square:hover {
-    background-color: #367c39;
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(4, 100px);
   }
-  
+}
